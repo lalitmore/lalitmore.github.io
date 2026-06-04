@@ -1,0 +1,6 @@
+# Dependencies for sync_resume.py
+# Install once with:  pip install -r requirements.txt
+# All free, open-source packages — no API keys, no costs.
+
+pdfplumber>=0.11.0   # extract text from PDF resumes
+python-docx>=1.1.0   # extract text from .docx resumes

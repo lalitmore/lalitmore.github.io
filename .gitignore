@@ -1,0 +1,16 @@
+# Secrets — NEVER commit these
+.env
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Backups created by sync_resume.py
+content.js.bak
+
+# OS noise
+.DS_Store
+Thumbs.db

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lalit More — Computer Science & Data Science student. AI engineer building distributed systems and ML pipelines. Portfolio of selected projects." />
+  <meta name="author" content="Lalit More" />
+  <meta name="theme-color" content="#C91A09" />
+
+  <!-- Open Graph (link previews on social / messaging) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lalit More — CS + Data Science Portfolio" />
+  <meta property="og:description" content="AI engineer building distributed systems and ML pipelines." />
+
+  <title>Lalit More // CS + Data Science</title>
+
+  <!-- Inline SVG favicon: a little LEGO brick -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='10' width='24' height='16' rx='2' fill='%23C91A09'/%3E%3Ccircle cx='11' cy='9' r='3' fill='%23C91A09'/%3E%3Ccircle cx='21' cy='9' r='3' fill='%23C91A09'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --lego-yellow:    #FFD700;
+      --lego-yellow-dk: #C9A800;
+      --lego-red:       #C91A09;
+      --lego-red-dk:    #9B1207;
+      --lego-blue:      #006DB7;
+      --lego-blue-dk:   #004E87;
+      --lego-green:     #237841;
+      --lego-green-dk:  #195A30;
+      --lego-orange:    #FE8A18;
+      --lego-orange-dk: #C96A0F;
+      --lego-purple:    #7B2D8B;
+      --lego-purple-dk: #5A1F67;
+      --lego-gold:      #B07D00;
+      --lego-gold-dk:   #856100;
+      --lego-black:     #1B1B1B;
+      --lego-white:     #FFFFFF;
+      --lego-lgray:     #E3E3E3;
+      --lego-mgray:     #9C9C9C;
+      --lego-dgray:     #6C6E68;
+      --page-bg:        #F5F2ED;
+      --font-display:   'Fredoka', sans-serif;
+      --font-body:      'Nunito', sans-serif;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--page-bg);
+      color: var(--lego-black);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.065) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+    }
+    ::selection { background: var(--lego-yellow); color: var(--lego-black); }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--lego-lgray); }
+    ::-webkit-scrollbar-thumb { background: var(--lego-red); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--lego-red-dk); }
+
+    /* Accessible "skip to content" link for keyboard users */
+    .skip-link {
+      position: absolute; left: -999px; top: 0; z-index: 200;
+      background: var(--lego-black); color: white; padding: 10px 18px;
+      font-family: var(--font-display); border-radius: 0 0 8px 0;
+    }
+    .skip-link:focus { left: 0; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    section { padding: 96px 0; }
+
+    .sec-eyebrow {
+      font-family: var(--font-display); font-weight: 600; font-size: 13px;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--lego-mgray); margin-bottom: 12px; display: block;
+    }
+    .sec-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(32px, 5vw, 52px); color: var(--lego-black);
+      line-height: 1.05; margin-bottom: 52px;
+    }
+    .sec-title .underline { position: relative; display: inline-block; }
+    .sec-title .underline::after {
+      content: ''; position: absolute; left: 0; bottom: -8px; right: 0; height: 6px; border-radius: 3px;
+    }
+    .ul-red  .underline::after { background: var(--lego-red);  box-shadow: 0 3px 0 var(--lego-red-dk); }
+    .ul-blue .underline::after { background: var(--lego-blue); box-shadow: 0 3px 0 var(--lego-blue-dk); }
+
+    [data-reveal] {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .6s cubic-bezier(.25,.8,.25,1), transform .6s cubic-bezier(.25,.8,.25,1);
+    }
+    [data-reveal].in { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      [data-reveal] { opacity: 1; transform: none; }
+    }
+
+    /* ── NAV ── */
+    #nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--lego-red);
+      box-shadow: 0 5px 0 var(--lego-red-dk), 0 8px 20px rgba(0,0,0,0.22);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 16px; }
+    .nav-logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 20px;
+      color: var(--lego-white); text-decoration: none; white-space: nowrap;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-badge {
+      background: var(--lego-yellow); color: var(--lego-black);
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 3px 8px; border-radius: 4px; box-shadow: 0 2px 0 var(--lego-yellow-dk);
+    }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-link {
+      font-family: var(--font-display); font-weight: 600; font-size: 14px;
+      color: rgba(255,255,255,0.78); text-decoration: none;
+      padding: 8px 14px; border-radius: 6px; transition: all .2s; letter-spacing: 0.5px;
+    }
+    .nav-link:hover, .nav-link:focus-visible { background: rgba(255,255,255,0.18); color: white; transform: translateY(-1px); }
+    .nav-status {
+      display: flex; align-items: center; gap: 7px;
+      font-family: var(--font-body); font-size: 12px; font-weight: 700;
+      color: var(--lego-black); background: var(--lego-yellow);
+      padding: 6px 14px; border-radius: 20px; box-shadow: 0 3px 0 var(--lego-yellow-dk);
+    }
+    .nav-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lego-green); animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+    .hamburger {
+      display: none; background: rgba(255,255,255,0.2); border: none;
+      color: white; font-size: 22px; padding: 6px 12px; border-radius: 6px; cursor: pointer;
+    }
+    #mobile-nav {
+      display: none; position: fixed; top: 67px; left: 0; right: 0; z-index: 99;
+      background: var(--lego-red); padding: 8px 16px 16px; flex-direction: column; gap: 4px;
+      box-shadow: 0 6px 0 var(--lego-red-dk), 0 10px 20px rgba(0,0,0,0.3);
+    }
+    #mobile-nav.open { display: flex; }
+    #mobile-nav a { font-family: var(--font-display); font-weight: 600; font-size: 18px; color: white; text-decoration: none; padding: 12px 16px; border-radius: 8px; }
+    #mobile-nav a:hover, #mobile-nav a:focus-visible { background: rgba(255,255,255,0.15); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display); font-weight: 600; font-size: 16px;
+      text-decoration: none; letter-spacing: 0.5px;
+      padding: 14px 28px; border-radius: 8px; cursor: pointer; border: none;
+      transition: transform .1s, box-shadow .1s;
+    }
+    .btn:active { transform: translateY(4px) !important; }
+    .btn-yellow { background: var(--lego-yellow); color: var(--lego-black); box-shadow: 0 5px 0 var(--lego-yellow-dk), 0 8px 18px rgba(0,0,0,0.2); }
+    .btn-yellow:hover, .btn-yellow:focus-visible { transform: translateY(-2px); box-shadow: 0 7px 0 var(--lego-yellow-dk), 0 12px 24px rgba(0,0,0,0.22); }
+    .btn-yellow:active { box-shadow: 0 1px 0 var(--lego-yellow-dk); }
+    .btn-red { background: var(--lego-red); color: var(--lego-white); box-shadow: 0 5px 0 var(--lego-red-dk), 0 8px 18px rgba(0,0,0,0.2); }
+    .btn-red:hover, .btn-red:focus-visible { transform: translateY(-2px); box-shadow: 0 7px 0 var(--lego-red-dk), 0 12px 24px rgba(0,0,0,0.22); }
+    .btn-red:active { box-shadow: 0 1px 0 var(--lego-red-dk); }
+    .btn-outline { background: white; color: var(--lego-black); border: 3px solid var(--lego-black); box-shadow: 0 5px 0 var(--lego-black), 0 8px 18px rgba(0,0,0,0.15); }
+    .btn-outline:hover, .btn-outline:focus-visible { transform: translateY(-2px); box-shadow: 0 7px 0 var(--lego-black), 0 12px 24px rgba(0,0,0,0.18); }
+    .btn-outline:active { box-shadow: 0 1px 0 var(--lego-black); }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 100px 0 90px; background: var(--lego-yellow);
+      box-shadow: 0 8px 0 var(--lego-yellow-dk); position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute; right: -80px; top: -80px;
+      width: 500px; height: 500px; border-radius: 50%; background: rgba(0,0,0,0.04); pointer-events: none;
+    }
+    .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .hero-tag {
+      display: inline-block; font-family: var(--font-display); font-weight: 600;
+      font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+      background: var(--lego-black); color: var(--lego-yellow);
+      padding: 6px 16px; border-radius: 4px; margin-bottom: 24px;
+      opacity: 0; animation: popIn .5s .1s cubic-bezier(.34,1.56,.64,1) forwards;
+    }
+    @keyframes popIn { from{opacity:0;transform:scale(.7) translateY(10px)} to{opacity:1;transform:scale(1) translateY(0)} }
+    .hero-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(56px, 10vw, 120px); line-height: 0.9;
+      color: var(--lego-black); margin-bottom: 24px; letter-spacing: -1px;
+    }
+    .hero-title .t1 { display: block; opacity:0; animation: slideUp .7s .2s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .hero-title .t2 { display: block; color: var(--lego-red); opacity:0; animation: slideUp .7s .35s cubic-bezier(.34,1.56,.64,1) forwards; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+    .hero-sub {
+      font-family: var(--font-body); font-weight: 600; font-size: 18px;
+      color: rgba(0,0,0,0.65); max-width: 520px; margin-bottom: 36px;
+      opacity:0; animation: slideUp .7s .5s cubic-bezier(.34,1.56,.64,1) forwards;
+    }
+    .hero-sub b { color: var(--lego-black); font-weight: 800; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; opacity:0; animation: slideUp .7s .65s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .hero-bricks { display: grid; grid-template-columns: repeat(3, 60px); gap: 10px; opacity: 0; animation: popIn .8s .5s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .h-brick { border-radius: 8px; position: relative; height: 54px; }
+    .h-brick::after {
+      content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      width: 30px; height: 10px; border-radius: 6px 6px 0 0; background: inherit; filter: brightness(1.12);
+    }
+    .b-red    { background: var(--lego-red);    box-shadow: 0 5px 0 var(--lego-red-dk); }
+    .b-blue   { background: var(--lego-blue);   box-shadow: 0 5px 0 var(--lego-blue-dk); }
+    .b-green  { background: var(--lego-green);  box-shadow: 0 5px 0 var(--lego-green-dk); }
+    .b-orange { background: var(--lego-orange); box-shadow: 0 5px 0 var(--lego-orange-dk); }
+    .b-white  { background: var(--lego-white);  box-shadow: 0 5px 0 var(--lego-lgray); border: 2px solid var(--lego-lgray); }
+    .b-yellow { background: var(--lego-yellow); box-shadow: 0 5px 0 var(--lego-yellow-dk); }
+    .hero-stats { display: flex; gap: 28px; margin-top: 48px; flex-wrap: wrap; opacity:0; animation: slideUp .7s .8s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .stat-val { font-family: var(--font-display); font-weight: 700; font-size: 32px; color: var(--lego-black); line-height: 1; }
+    .stat-lab { font-size: 13px; color: rgba(0,0,0,0.55); font-weight: 600; letter-spacing: 0.5px; }
+
+    /* ── PROJECTS ── */
+    #projects { background: white; }
+    .filters { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+    .filter {
+      font-family: var(--font-display); font-weight: 600; font-size: 14px;
+      padding: 10px 20px; border-radius: 8px; cursor: pointer;
+      border: 3px solid transparent; background: var(--lego-lgray); color: var(--lego-dgray);
+      box-shadow: 0 4px 0 #c4c4c4; transition: all .15s; letter-spacing: 0.5px;
+    }
+    .filter:hover, .filter:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 0 #c4c4c4; color: var(--lego-black); }
+    .filter:active { transform: translateY(3px); box-shadow: 0 1px 0 #c4c4c4; }
+    .filter.active { background: var(--lego-blue); color: white; box-shadow: 0 4px 0 var(--lego-blue-dk); }
+    .filter.active:hover { box-shadow: 0 6px 0 var(--lego-blue-dk); }
+    .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .proj-card {
+      background: white; border-radius: 12px; overflow: hidden;
+      border: 3px solid var(--lego-black); box-shadow: 6px 6px 0 var(--lego-black);
+      transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .proj-card:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--lego-black); }
+    .proj-card.hide { display: none; }
+    .card-roof { padding: 14px 18px 10px; display: flex; flex-direction: column; gap: 10px; }
+    .roof-blue   { background: var(--lego-blue);   box-shadow: 0 5px 0 var(--lego-blue-dk); }
+    .roof-red    { background: var(--lego-red);    box-shadow: 0 5px 0 var(--lego-red-dk); }
+    .roof-orange { background: var(--lego-orange); box-shadow: 0 5px 0 var(--lego-orange-dk); }
+    .roof-green  { background: var(--lego-green);  box-shadow: 0 5px 0 var(--lego-green-dk); }
+    .roof-purple { background: var(--lego-purple); box-shadow: 0 5px 0 var(--lego-purple-dk); }
+    .roof-gold   { background: var(--lego-gold);   box-shadow: 0 5px 0 var(--lego-gold-dk); }
+    .roof-top { display: flex; align-items: center; justify-content: space-between; }
+    .card-set-num { font-family: var(--font-display); font-weight: 700; font-size: 11px; color: rgba(0,0,0,0.45); letter-spacing: 1.5px; text-transform: uppercase; }
+    .card-badge { font-family: var(--font-display); font-weight: 700; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; background: rgba(0,0,0,0.18); color: white; }
+    .card-studs-row { display: flex; gap: 6px; }
+    .card-stud { width: 15px; height: 15px; border-radius: 50%; background: rgba(255,255,255,0.25); box-shadow: inset 0 2px 3px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.2); }
+    .card-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; border-top: 3px solid var(--lego-black); }
+    .card-title { font-family: var(--font-display); font-weight: 700; font-size: 24px; color: var(--lego-black); margin-bottom: 10px; }
+    .card-desc { color: var(--lego-dgray); font-size: 14px; margin-bottom: 18px; flex: 1; line-height: 1.65; font-weight: 600; }
+    .card-metrics { display: flex; gap: 20px; margin-bottom: 18px; padding: 14px 0; border-top: 2px dashed var(--lego-lgray); border-bottom: 2px dashed var(--lego-lgray); }
+    .metric-val { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--lego-black); line-height: 1; }
+    .metric-lab { font-size: 11px; color: var(--lego-mgray); font-weight: 700; letter-spacing: 0.5px; margin-top: 4px; text-transform: uppercase; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .tag { font-family: var(--font-display); font-weight: 600; font-size: 12px; padding: 5px 12px; border-radius: 6px; color: white; letter-spacing: 0.5px; }
+    .tag:nth-child(4n+1) { background: var(--lego-blue);   box-shadow: 0 3px 0 var(--lego-blue-dk); }
+    .tag:nth-child(4n+2) { background: var(--lego-red);    box-shadow: 0 3px 0 var(--lego-red-dk); }
+    .tag:nth-child(4n+3) { background: var(--lego-green);  box-shadow: 0 3px 0 var(--lego-green-dk); }
+    .tag:nth-child(4n+0) { background: var(--lego-orange); box-shadow: 0 3px 0 var(--lego-orange-dk); }
+    .card-actions { display: flex; gap: 12px; }
+    .card-btn { font-family: var(--font-display); font-weight: 600; font-size: 13px; text-decoration: none; padding: 9px 18px; border-radius: 6px; background: var(--lego-lgray); color: var(--lego-black); box-shadow: 0 3px 0 #b8b8b8; transition: all .15s; }
+    .card-btn:hover, .card-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 5px 0 #b8b8b8; }
+    .card-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #b8b8b8; }
+    .card-btn.primary { background: var(--lego-black); color: white; box-shadow: 0 3px 0 #555; }
+    .card-btn.primary:hover { box-shadow: 0 5px 0 #555; }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--lego-blue); box-shadow: 0 8px 0 var(--lego-blue-dk); }
+    .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .skill-brick { background: white; border-radius: 10px; border: 3px solid var(--lego-black); box-shadow: 5px 5px 0 var(--lego-black); overflow: hidden; transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s; }
+    .skill-brick:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--lego-black); }
+    .skill-roof { padding: 10px 16px 8px; display: flex; flex-direction: column; gap: 7px; }
+    .skill-roof-label { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: white; letter-spacing: 0.5px; }
+    .skill-studs { display: flex; gap: 5px; }
+    .skill-stud { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.28); box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); }
+    .skill-list { list-style: none; border-top: 3px solid var(--lego-black); padding: 6px 0; }
+    .skill-list li { font-family: var(--font-body); font-weight: 600; font-size: 13.5px; color: var(--lego-dgray); padding: 8px 16px; border-bottom: 2px dashed var(--lego-lgray); display: flex; align-items: center; gap: 8px; transition: background .15s, color .15s; }
+    .skill-list li:last-child { border-bottom: none; }
+    .skill-list li:hover { background: #f9f9f9; color: var(--lego-black); }
+    .skill-list li .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; opacity: 0.35; flex-shrink: 0; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--page-bg); }
+    .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+    .about-text p { color: var(--lego-dgray); font-weight: 600; font-size: 15px; margin-bottom: 18px; max-width: 560px; }
+    .about-text p b { color: var(--lego-black); font-weight: 800; }
+    .spec-panel { background: white; border-radius: 12px; border: 3px solid var(--lego-black); box-shadow: 6px 6px 0 var(--lego-black); overflow: hidden; }
+    .spec-header { background: var(--lego-yellow); padding: 12px 20px; border-bottom: 3px solid var(--lego-black); display: flex; align-items: center; justify-content: space-between; }
+    .spec-header-label { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--lego-black); letter-spacing: 0.5px; }
+    .spec-header-studs { display: flex; gap: 5px; }
+    .spec-stud { width: 13px; height: 13px; border-radius: 50%; background: rgba(0,0,0,0.2); box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); }
+    .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 13px 20px; border-bottom: 2px dashed var(--lego-lgray); font-size: 14px; }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { font-weight: 700; color: var(--lego-mgray); font-family: var(--font-display); font-size: 13px; letter-spacing: 0.5px; }
+    .spec-val { color: var(--lego-black); font-weight: 700; text-align: right; }
+    .spec-val .open { color: var(--lego-green); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--lego-green); box-shadow: 0 8px 0 var(--lego-green-dk); text-align: center; }
+    .contact-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(32px,5vw,52px); color: white; margin-bottom: 18px; }
+    .contact-desc { color: rgba(255,255,255,0.8); font-weight: 600; font-size: 16px; max-width: 500px; margin: 0 auto 40px; }
+    .contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .social-links { display: flex; gap: 20px; justify-content: center; margin-top: 36px; flex-wrap: wrap; }
+    .social-link { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.5px; transition: color .2s; }
+    .social-link:hover, .social-link:focus-visible { color: white; }
+
+    footer { background: var(--lego-black); padding: 28px 0; font-family: var(--font-display); font-size: 13px; color: var(--lego-mgray); }
+    .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .foot-inner b { color: var(--lego-yellow); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-bricks { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .proj-grid  { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links, .nav-status { display: none; }
+      .hamburger { display: block; }
+    }
+    @media (max-width: 540px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .wrap { padding: 0 18px; }
+      section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#projects" class="skip-link">Skip to content</a>
+
+  <!-- ░░ NAV (logo text injected from content.js) ░░ -->
+  <nav id="nav" aria-label="Primary">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span id="nav-name">Portfolio</span>
+        <span class="logo-badge" id="nav-set">SET</span>
+      </a>
+      <div class="nav-links">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </div>
+      <div class="nav-status"><span class="nav-dot"></span> <span id="nav-status-text">Open to Work</span></div>
+      <button class="hamburger" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+  </nav>
+
+  <nav id="mobile-nav" aria-label="Mobile">
+    <a href="#projects" data-close>🔵 Projects</a>
+    <a href="#skills"   data-close>🔴 Skills</a>
+    <a href="#about"    data-close>🟡 About</a>
+    <a href="#contact"  data-close>🟢 Contact</a>
+  </nav>
+
+  <main>
+    <!-- ░░ HERO ░░ -->
+    <section id="hero">
+      <div class="wrap">
+        <div class="hero-inner">
+          <div>
+            <span class="hero-tag" id="hero-eyebrow"></span>
+            <h1 class="hero-title"><span class="t1" id="hero-name1"></span><span class="t2" id="hero-name2"></span></h1>
+            <p class="hero-sub" id="hero-sub"></p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn btn-red">View Projects →</a>
+              <a id="hero-resume" class="btn btn-outline">Download Résumé</a>
+            </div>
+            <div class="hero-stats" id="hero-stats"></div>
+          </div>
+          <div class="hero-bricks" aria-hidden="true">
+            <div class="h-brick b-red"></div><div class="h-brick b-blue"></div><div class="h-brick b-green"></div>
+            <div class="h-brick b-orange"></div><div class="h-brick b-white"></div><div class="h-brick b-red"></div>
+            <div class="h-brick b-blue"></div><div class="h-brick b-yellow"></div><div class="h-brick b-green"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section id="projects">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="sec-eyebrow">Build Log</span>
+          <h2 class="sec-title ul-red"><span class="underline">Selected Projects</span></h2>
+        </div>
+        <div class="filters" data-reveal role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all">🧱 All Builds</button>
+          <button class="filter" data-filter="swe">⚙️ Software</button>
+          <button class="filter" data-filter="ds">🧠 ML &amp; Data</button>
+        </div>
+        <div class="proj-grid" id="proj-grid"></div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section id="skills">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="sec-eyebrow" style="color:rgba(255,255,255,0.6)">Toolchain</span>
+          <h2 class="sec-title" style="color:white;margin-bottom:52px">Stack &amp; Specialties</h2>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section id="about">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="sec-eyebrow">Whoami</span>
+          <h2 class="sec-title ul-blue"><span class="underline">About the Builder</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text" id="about-text" data-reveal></div>
+          <div class="spec-panel" data-reveal>
+            <div class="spec-header">
+              <span class="spec-header-label">⬛ SYSTEM SPECS</span>
+              <div class="spec-header-studs"><div class="spec-stud"></div><div class="spec-stud"></div><div class="spec-stud"></div></div>
+            </div>
+            <div id="spec-rows"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section id="contact">
+      <div class="wrap">
+        <div data-reveal>
+          <span class="sec-eyebrow" style="color:rgba(255,255,255,0.6)">Connect</span>
+          <h2 class="contact-title">Let's Build Something 🧱</h2>
+        </div>
+        <p class="contact-desc" data-reveal>Open to new-grad SWE and ML / Data Science roles. My inbox is always open — I reply fast.</p>
+        <div class="contact-btns" data-reveal>
+          <a id="contact-email" class="btn btn-yellow">📧 Say Hello</a>
+          <a id="contact-resume" class="btn btn-outline">📄 Download Résumé</a>
+        </div>
+        <div class="social-links" id="social-links" data-reveal></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <span>© <span id="foot-year"></span> <b id="foot-name"></b> — Built from scratch, no templates.</span>
+      <span>🧱 Made with studs &amp; curiosity</span>
+    </div>
+  </footer>
+
+  <!-- Content data (the only file you edit to update the site) -->
+  <script src="content.js"></script>
+  <!-- Renderer + interactions -->
+  <script src="render.js"></script>
+</body>
+</html>
