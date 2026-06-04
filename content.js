@@ -1,4 +1,4 @@
-/* Auto-updated by sync_resume.py on 2026-06-04 16:16. Edit freely — re-running the script will reformat this block. */
+/* Auto-updated by sync_resume.py on 2026-06-04 16:29. Edit freely — re-running the script will reformat this block. */
 window.SITE_CONTENT = {
   "name": "Lalit More",
   "initials": "LM",
