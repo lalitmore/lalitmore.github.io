@@ -73,13 +73,13 @@ pip install -r requirements.txt
 
 ```bash
 # See what the script extracted before touching anything
-python sync_resume.py resume.pdf --report
+python3 sync_resume.py resume.pdf --report
 
 # Preview the proposed changes
-python sync_resume.py resume.pdf --dry-run
+python3 sync_resume.py resume.pdf --dry-run
 
 # Apply the changes
-python sync_resume.py resume.pdf
+python3 sync_resume.py resume.pdf
 
 # Review what changed, then push
 git diff content.js
