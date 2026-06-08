@@ -126,7 +126,9 @@ window.SITE_CONTENT = {
       "badge": "SWE",
       "color": "blue",
       "title": "VO2",
-      "desc": "Engineered a full-stack platform (Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and",
+      "desc": `• Engineered a full-stack platform (Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and Garmin biometric data.
+• Designed statistically rigorous self-experiments using time-series analysis, hypothesis testing, and retrieval-augmented generation (RAG) grounded in PubMed literature.
+• Awarded Best AI for Decision Support at Carnegie Mellon University’s TartanHacks for impact-driven health analytics.`,
       "metrics": [
         {
           "val": "48k",
