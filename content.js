@@ -40,7 +40,7 @@ window.SITE_CONTENT = {
     "specs": [
       {
         "key": "LOCATION",
-        "val": "Ann Arbor, MI"
+        "val": "Pittsburgh, PA"
       },
       {
         "key": "STATUS",
