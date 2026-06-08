@@ -122,8 +122,8 @@ window.SITE_CONTENT = {
   "projects": [
     {
       "setNum": "SET #001",
-      "category": "AI/ML",
-      "badge": "SWE",
+      "category": "ai",
+      "badge": "AI / ML",
       "color": "blue",
       "title": "AI Competitive Intelligence Agent",
       "desc": `
@@ -166,7 +166,7 @@ window.SITE_CONTENT = {
     },
     {
       "setNum": "SET #002",
-      "category": "AI/ML",
+      "category": "ai",
       "badge": "ML / DATA",
       "color": "red",
       "title": "VO2",
@@ -208,7 +208,7 @@ window.SITE_CONTENT = {
 
     {
       "setNum": "SET #003",
-      "category": "AI/ML",
+      "category": "ai",
       "badge": "ML / DATA",
       "color": "red",
       "title": "Smart Attendance System",
