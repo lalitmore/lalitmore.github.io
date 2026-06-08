@@ -122,13 +122,58 @@ window.SITE_CONTENT = {
   "projects": [
     {
       "setNum": "SET #001",
-      "category": "swe",
+      "category": "AI/ML",
       "badge": "SWE",
       "color": "blue",
+      "title": "AI Competitive Intelligence Agent",
+      "desc": `
+      •  Delivered real-time competitive intelligence on any public company in under 30 seconds (end-to-end API response time) by implementing an agentic LLM loop using the Anthropic Claude API with integrated web search tooling. \n
+      • Achieved zero infrastructure cost at rest by deploying a Dockerized FastAPI application to Google Cloud Run, which auto-scales to zero between requests; managed credentials with Secret Manager and persistence with Google Cloud Storage. `,
+      "metrics": [
+      //   {
+        //   "val": "48k",
+        //   "lab": "Ops / sec"
+        // },
+        // {
+        //   "val": "5",
+        //   "lab": "Node cluster"
+        // },
+        {
+          "val": "99.9%",
+          "lab": "Uptime"
+        }
+      ],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "Google Cloud Run",
+        "BigQuery",
+        "Anthropic Claude API",
+        "React"
+      ],
+      // "links": [
+      //   {
+      //     "label": "View Code",
+      //     "url": "#",
+      //     "primary": true
+      //   },
+      //   {
+      //     "label": "Live Demo ↗",
+      //     "url": "#"
+      //   }
+      // ]
+    },
+    {
+      "setNum": "SET #002",
+      "category": "AI/ML",
+      "badge": "ML / DATA",
+      "color": "red",
       "title": "VO2",
-      "desc": `• Engineered a full-stack platform (Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and Garmin biometric data. \n
-• Designed statistically rigorous self-experiments using time-series analysis, hypothesis testing, and retrieval-augmented generation (RAG) grounded in PubMed literature. \n
-• Awarded Best AI for Decision Support at Carnegie Mellon University’s TartanHacks for impact-driven health analytics.`,
+      "desc": `
+      • Engineered a full- stack platform(Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and Garmin biometric data.\n
+      • Designed statistically rigorous self - experiments using time - series analysis, hypothesis testing, and retrieval - augmented generation(RAG) grounded in PubMed literature.\n
+      • Awarded Best AI for Decision Support at Carnegie Mellon University’s TartanHacks for impact - driven health analytics.`,
       // "metrics": [
       //   {
       //     "val": "48k",
@@ -160,9 +205,10 @@ window.SITE_CONTENT = {
       //   }
       // ]
     },
+
     {
-      "setNum": "SET #002",
-      "category": "ds",
+      "setNum": "SET #003",
+      "category": "AI/ML",
       "badge": "ML / DATA",
       "color": "red",
       "title": "Smart Attendance System",
@@ -183,8 +229,9 @@ window.SITE_CONTENT = {
       //   }
       // ]
     },
+
     {
-      "setNum": "SET #003",
+      "setNum": "SET #004",
       "category": "swe",
       "badge": "SWE",
       "color": "orange",
@@ -220,6 +267,7 @@ window.SITE_CONTENT = {
       //   }
       // ]
     },
+
     {
       "setNum": "SET #005",
       "category": "swe",
@@ -249,7 +297,7 @@ window.SITE_CONTENT = {
           "label": "View Certificate",
           "url": "https://www.credly.com/badges/b8e4725a-4dbc-4379-96e2-e7526caeb86e/linked_in_profile",
           "primary": true
-        },
+        }
         // {
         //   "label": "Live Demo ↗",
         //   "url": "#"
