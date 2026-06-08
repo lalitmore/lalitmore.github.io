@@ -152,17 +152,17 @@ window.SITE_CONTENT = {
         "Anthropic Claude API",
         "React"
       ],
-      // "links": [
-      //   {
-      //     "label": "View Code",
-      //     "url": "#",
-      //     "primary": true
-      //   },
+      "links": [
+        {
+          "label": "View Code",
+          "url": "https://github.com/lalitmore/ai-research-agent",
+          "primary": true
+        }
       //   {
       //     "label": "Live Demo ↗",
       //     "url": "#"
       //   }
-      // ]
+      ]
     },
     {
       "setNum": "SET #002",
