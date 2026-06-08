@@ -248,7 +248,7 @@ window.SITE_CONTENT = {
         {
           "label": "View Certificate",
           "url": "https://www.credly.com/badges/b8e4725a-4dbc-4379-96e2-e7526caeb86e/linked_in_profile",
-          "primary": false
+          "primary": true
         },
         // {
         //   "label": "Live Demo ↗",
