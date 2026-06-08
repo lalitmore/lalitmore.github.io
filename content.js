@@ -126,111 +126,39 @@ window.SITE_CONTENT = {
       "badge": "SWE",
       "color": "blue",
       "title": "VO2",
-      "desc": `• Engineered a full-stack platform (Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and Garmin biometric data.
-• Designed statistically rigorous self-experiments using time-series analysis, hypothesis testing, and retrieval-augmented generation (RAG) grounded in PubMed literature.
+      "desc": `• Engineered a full-stack platform (Next.js, FastAPI, Plotly) to ingest and analyze longitudinal WHOOP, Oura, and Garmin biometric data. \n
+• Designed statistically rigorous self-experiments using time-series analysis, hypothesis testing, and retrieval-augmented generation (RAG) grounded in PubMed literature. \n
 • Awarded Best AI for Decision Support at Carnegie Mellon University’s TartanHacks for impact-driven health analytics.`,
-      "metrics": [
-        {
-          "val": "48k",
-          "lab": "Ops / sec"
-        },
-        {
-          "val": "5",
-          "lab": "Node cluster"
-        },
-        {
-          "val": "99.9%",
-          "lab": "Uptime"
-        }
-      ],
+      // "metrics": [
+      //   {
+      //     "val": "48k",
+      //     "lab": "Ops / sec"
+      //   },
+      //   {
+      //     "val": "5",
+      //     "lab": "Node cluster"
+      //   },
+      //   {
+      //     "val": "99.9%",
+      //     "lab": "Uptime"
+      //   }
+      // ],
       "tags": [
         "Next.js",
         "FastAPI",
         "Plotly"
       ],
-      "links": [
-        {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
-        },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "setNum": "SET #002",
-      "category": "swe",
-      "badge": "SWE",
-      "color": "red",
-      "title": "Garmin biometric data.",
-      "desc": "Designed statistically rigorous self-experiments using time-series analysis, hypothesis testing, and retrieval-augmented generation (RAG) grounded in PubMed literature. Awarded Best AI for Decision Support at Carnegie Mellon University’s...",
-      "metrics": [
-        {
-          "val": "0.87",
-          "lab": "Mean IoU"
-        },
-        {
-          "val": "14k",
-          "lab": "Image tiles"
-        },
-        {
-          "val": "4",
-          "lab": "Spectral bands"
-        }
-      ],
-      "tags": [
-        "Garmin biometric data"
-      ],
-      "links": [
-        {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
-        },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "setNum": "SET #003",
-      "category": "swe",
-      "badge": "SWE",
-      "color": "orange",
-      "title": "Cloud Storage.",
-      "desc": "Cloud Storage.",
-      "metrics": [
-        {
-          "val": "0.87",
-          "lab": "Mean IoU"
-        },
-        {
-          "val": "14k",
-          "lab": "Image tiles"
-        },
-        {
-          "val": "4",
-          "lab": "Spectral bands"
-        }
-      ],
-      "tags": [
-        "Cloud Storage"
-      ],
-      "links": [
-        {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
-        },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
-      ]
+      // "links": [
+      //   {
+      //     "label": "View Code",
+      //     "url": "#",
+      //     "primary": true
+      //   },
+      //   {
+      //     "label": "Live Demo ↗",
+      //     "url": "#"
+      //   }
+      // ]
     },
     {
       "setNum": "SET #002",
@@ -239,35 +167,21 @@ window.SITE_CONTENT = {
       "color": "red",
       "title": "Smart Attendance System",
       "desc": "Built a real-time face recognition and attendance system using Python and OpenCV for image processing. Automated attendance logging by storing records in CSV files for structured data management.",
-      "metrics": [
-        {
-          "val": "94%",
-          "lab": "F1 score"
-        },
-        {
-          "val": "5k/hr",
-          "lab": "Articles"
-        },
-        {
-          "val": "3",
-          "lab": "Data sources"
-        }
-      ],
       "tags": [
         "OpenCV",
         "Python"
-      ],
-      "links": [
-        {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
-        },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
       ]
+      // "links": [
+      //   {
+      //     "label": "View Code",
+      //     "url": "#",
+      //     "primary": true
+      //   },
+      //   {
+      //     "label": "Live Demo ↗",
+      //     "url": "#"
+      //   }
+      // ]
     },
     {
       "setNum": "SET #003",
@@ -276,35 +190,35 @@ window.SITE_CONTENT = {
       "color": "orange",
       "title": "Lost in Time",
       "desc": "Developed a 2D platformer game in Unity using C#, offering an experience that promotes social interaction. Integrated Unity’s 2D Physics Engine for gravity, collisions, and platform interactions, improving realism. Implemented character...",
-      "metrics": [
-        {
-          "val": "0.87",
-          "lab": "Mean IoU"
-        },
-        {
-          "val": "14k",
-          "lab": "Image tiles"
-        },
-        {
-          "val": "4",
-          "lab": "Spectral bands"
-        }
-      ],
+      // "metrics": [
+      //   {
+      //     "val": "0.87",
+      //     "lab": "Mean IoU"
+      //   },
+      //   {
+      //     "val": "14k",
+      //     "lab": "Image tiles"
+      //   },
+      //   {
+      //     "val": "4",
+      //     "lab": "Spectral bands"
+      //   }
+      // ],
       "tags": [
         "Unity",
         "C#"
-      ],
-      "links": [
-        {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
-        },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
       ]
+      // "links": [
+      //   {
+      //     "label": "View Code",
+      //     "url": "#",
+      //     "primary": true
+      //   },
+      //   {
+      //     "label": "Live Demo ↗",
+      //     "url": "#"
+      //   }
+      // ]
     },
     {
       "setNum": "SET #005",
@@ -332,14 +246,14 @@ window.SITE_CONTENT = {
       ],
       "links": [
         {
-          "label": "View Code",
-          "url": "#",
-          "primary": true
+          "label": "View Certificate",
+          "url": "https://www.credly.com/badges/b8e4725a-4dbc-4379-96e2-e7526caeb86e/linked_in_profile",
+          "primary": false
         },
-        {
-          "label": "Live Demo ↗",
-          "url": "#"
-        }
+        // {
+        //   "label": "Live Demo ↗",
+        //   "url": "#"
+        // }
       ]
     }
   ]
